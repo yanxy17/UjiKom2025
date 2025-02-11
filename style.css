@@ -1,0 +1,130 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background & Font */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #FF6F61, #D4A5A5);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Header */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Tambah Tugas */
+.form-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+input[type="text"], select, input[type="date"] {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  width: 220px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus, select:focus, input[type="date"]:focus {
+  border: 2px solid #FF6F61;
+  box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+}
+
+/* Tombol Tambah */
+button {
+  background-color: #FF6F61;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #D46A6A;
+}
+
+/* Daftar Tugas */
+.task-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 90%;
+  max-width: 900px;
+  margin-top: 30px;
+}
+
+/* Setiap Tugas */
+.task-item {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Input dalam Task Item */
+.task-item input[type="text"], 
+.task-item select, 
+.task-item input[type="date"] {
+  width: calc(100% - 20px);
+  margin-bottom: 10px;
+}
+
+/* Tombol dalam Task Item */
+.task-item button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Tombol Hapus */
+.task-item .delete {
+  background-color: #FF4C4C;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.task-item button:hover {
+  background-color: #45a049;
+}
+
+.task-item .delete:hover {
+  background-color: #e33b3b;
+}
+
+/* Tanggal Tugas */
+.task-item .task-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 10px;
+}
